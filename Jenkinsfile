@@ -23,6 +23,13 @@ pipeline{
                 bat 'mvn test'
             }
         }
+     stage('Local Deployment') {
+      steps{
+                echo "Local deployment "
+                
+               
+            }
+    }
 
     }
 }
