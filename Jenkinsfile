@@ -22,6 +22,19 @@ pipeline{
             steps{
                 bat 'mvn test'
             }
+        stage('Containerization') {
+      steps {
+        sh 'echo Docker Build Image..'
+        sh 'echo Docker Tag Image....'
+        sh 'echo Docker Push Image......'
+      }
+    }
+
+    stage('Kubernetes Deployment') {
+      steps {
+        sh 'echo Deploy to Kubernetes using ArgoCD'
+      }
+    }
         }
 
     }
